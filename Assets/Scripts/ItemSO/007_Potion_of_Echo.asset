@@ -16,5 +16,6 @@ MonoBehaviour:
   itemName: Potion of Echo
   type: 0
   icon: {fileID: 21300000, guid: 70efb6d186c82d94d8742fd013a0169c, type: 3}
-  power: 15
+  power: 30
   prefabID: 0
+  normalPrice: 70
