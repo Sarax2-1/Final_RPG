@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7fd7de706c7d4454b9abea6d57375a8a
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ToonShading/Shaders/ToonBasicOutline.shader
+  uploadId: 96407

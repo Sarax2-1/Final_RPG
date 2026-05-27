@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d75cd2d1feec3ea40ac180e166b71df0
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ToonShading/Shaders/ToonLitOutline.shader
+  uploadId: 96407

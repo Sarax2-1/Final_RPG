@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 8b93820fbbcbc134db3db0446c94d675
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/RadialBlur.shader
+  uploadId: 96407

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 557d4cd2cef34064eb4fdf086b3a3d2d
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader
+  uploadId: 96407

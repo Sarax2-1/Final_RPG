@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 44249632be362f9449a6b1f0c17d670d
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/BlurEffectConeTaps.shader
+  uploadId: 96407

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5c8a8c4258e968e42bbcb80da2af80e4
+timeCreated: 1552588363
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 142076
+  packageName: 'Conifers [BOTD]'
+  packageVersion: 2.01
+  assetPath: Assets/Forst/Conifers [BOTD]/Sources/Conifer Tall/SM Conifer Tall LOD0.asset
+  uploadId: 649803

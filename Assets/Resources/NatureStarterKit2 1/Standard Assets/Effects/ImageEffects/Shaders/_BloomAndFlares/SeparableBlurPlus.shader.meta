@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 152322a6be8e7c24ebe7a3bc4b05f006
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/SeparableBlurPlus.shader
+  uploadId: 96407

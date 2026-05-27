@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: dd917f5e07cb7ca4f9084e51ad6e1895
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/PrepareSunShaftsBlur.shader
+  uploadId: 96407

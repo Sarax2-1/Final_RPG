@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 0f016a48958a79b4a878ed0e0d9c9dfa
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/CreaseApply.shader
+  uploadId: 96407

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 3bb4dc615e0ec9543b134bfe5d5cab24
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/SSAOShader.shader
+  uploadId: 96407

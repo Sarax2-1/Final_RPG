@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: bbd27f07ad7ebff4c8949aae77ce3df7
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/SepiaToneEffect.shader
+  uploadId: 96407

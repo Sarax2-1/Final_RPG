@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6f55c503d38ffb84d8bbb00b733760b9
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/Projectors/Shaders/ProjectorLight.shader
+  uploadId: 96407

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: ff1c2cd9d90bdfd409d3a4ea029a65b5
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/Contrast
+    Stretch/MinMaxReduction.shader
+  uploadId: 96407

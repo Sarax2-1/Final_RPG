@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d19cf7e9bfe8bf3418d324c105af36d6
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MobileBlur.shader
+  uploadId: 96407

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 04a75088840e74b4bab1be91559b8390
+timeCreated: 1451413727
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Materials/sky.mat
+  uploadId: 96407

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 76fcdabda32976d4aba48e7f65be455a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206909
+  packageName: WaterWorks - Simple water/ocean/river system for URP + reflection
+    + refraction
+  packageVersion: 1.0
+  assetPath: Assets/WaterWorks/Water_Plane.prefab
+  uploadId: 476381

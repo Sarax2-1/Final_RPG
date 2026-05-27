@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: e1b61d42e63f5af4a9c1be8cc6f960de
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/Contrast
+    Stretch/Luminance.shader
+  uploadId: 96407

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: fb324bbbb6a094a49a00ba33d00d0a50
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/ChromaticAberrationShader.shader
+  uploadId: 96407

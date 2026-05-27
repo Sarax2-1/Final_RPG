@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d60968733f6750a41b628d1274e488f0
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/BlendModesOverlay.shader
+  uploadId: 96407
