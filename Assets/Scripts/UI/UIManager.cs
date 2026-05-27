@@ -558,7 +558,11 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < PartyManager.instance.Members.Count; i++)
         {
             toggleAvatar[i].gameObject.SetActive(true);
+
+            toggleAvatar[i].targetGraphic.GetComponent<Image>().sprite
+            = PartyManager.instance.Members[i].AvatarPic;
         }
+
         toggleAvatar[0].isOn = true;
     }
 
@@ -570,6 +574,9 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log($"is On: {i}");
             PartyManager.instance.SelectsingleHeroByToggle(i);
+
+            if (charPanel.activeInHierarchy)
+                ShowCharPanel();
         }
         else
         {

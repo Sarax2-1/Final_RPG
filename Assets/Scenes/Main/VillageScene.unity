@@ -9131,6 +9131,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1035911625858211880, guid: 1d0c1dfbcb6f5a140858ccc642388726, type: 3}
   m_PrefabInstance: {fileID: 38470535}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &679928598 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1538076461562193666, guid: 1d0c1dfbcb6f5a140858ccc642388726, type: 3}
+  m_PrefabInstance: {fileID: 38470535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2d7074bb15e484ca565b9d899c7538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hero
 --- !u!1 &682103769
 GameObject:
   m_ObjectHideFlags: 0
@@ -19690,6 +19701,10 @@ PrefabInstance:
       propertyPath: isShopKeeper
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 846143121654811134, guid: b19779b3edcd20e4bb827f59aed8b1ef, type: 3}
+      propertyPath: shopItems.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28246,6 +28261,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: magicData.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 18b50afae70b8d741bd9bd5db2ef9d35, type: 2}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 29dcc5d6cab085143b725a20b9fc5242, type: 2}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f7712a2f4252dc04bb03216b0a16841b, type: 2}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2703da6faf25ea04db2ea3be412b3af7, type: 2}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e2f8e3e48c04a394ba16be9b463e9dd5, type: 2}
+    - target: {fileID: 4066792239679609283, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'magicData.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dbffbaa2bcca4d64388c3fb4eebc32d5, type: 2}
     - target: {fileID: 4156319354806261796, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: enterPoints.Array.size
       value: 1
@@ -28261,7 +28304,7 @@ PrefabInstance:
     - target: {fileID: 5669006883163393001, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: 'members.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 679928598}
     - target: {fileID: 6609629218454222256, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: boxSelection
       value: 

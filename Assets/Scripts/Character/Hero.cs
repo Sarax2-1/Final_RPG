@@ -127,7 +127,7 @@ public class Hero : Character
 
             switch (level)
             {
-                case 5:
+                case 1:
                     if (MyAction.onCreateMagic != null)
                     {
                         magic = MyAction.onCreateMagic(0);
@@ -135,7 +135,7 @@ public class Hero : Character
                         uiManager.ShowMagicToggles();
                     }
                     break;
-                case 10:
+                case 5:
                     if (MyAction.onCreateMagic != null)
                     {
                         magic = MyAction.onCreateMagic(1);
@@ -143,6 +143,25 @@ public class Hero : Character
                         uiManager.ShowMagicToggles();
                     }
                     break;
+                case 10:
+                    if (MyAction.onCreateMagic != null)
+                    {
+                        magic = MyAction.onCreateMagic(2);
+                        magic = MyAction.onCreateMagic(3);
+                        magicSkills.Add(magic);
+                        uiManager.ShowMagicToggles();
+                    }
+                    break;
+                case 15:
+                    if (MyAction.onCreateMagic != null)
+                    {
+                        magic = MyAction.onCreateMagic(4);
+                        magic = MyAction.onCreateMagic(5);
+                        magicSkills.Add(magic);
+                        uiManager.ShowMagicToggles();
+                    }
+                    break;
+
             }
         }
     }
