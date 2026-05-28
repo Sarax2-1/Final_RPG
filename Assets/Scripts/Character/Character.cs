@@ -328,35 +328,6 @@ public abstract class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //private IEnumerator ShootMagicCast(Magic curMagicCast)
-    //{
-    //    if (vfxManager != null)
-    //        vfxManager.ShootMagic(curMagicCast.ShootID,
-    //            transform.position, curCharTarget.transform.position,
-    //            curMagicCast.ShootTime);
-
-    //    yield return new WaitForSeconds(curMagicCast.ShootTime);
-
-    //    MagicCastLogic(curMagicCast);
-    //    isMagicMode = false;
-
-    //    SetState(CharState.Idle);
-    //    if (uiManager != null)
-    //        uiManager.IsOnCurToggleMagic(false);
-    //}
-
-    //private IEnumerator LoadMagicCast(Magic curMagicCast)
-    //{
-    //    if (vfxManager != null)
-    //        vfxManager.LoadMagic(curMagicCast.LoadID,
-    //            transform.position,
-    //            curMagicCast.LoadTime);
-
-    //    yield return new WaitForSeconds(curMagicCast.LoadTime);
-
-    //    StartCoroutine(ShootMagicCast(curMagicCast));
-    //}
-
     private IEnumerator ShootMagicCast(Magic curMagicCast)
     {
         if (MyAction.onShootMagic != null)
@@ -364,6 +335,9 @@ public abstract class Character : MonoBehaviour
                             transform.position,
                             curCharTarget.transform.position,
                             curMagicCast.ShootTime);
+
+        if (curMagicCast.SfxIndex >= 0)
+            AudioManager.instance.PlaySFX(curMagicCast.SfxIndex);
 
         yield return new WaitForSeconds(curMagicCast.ShootTime);
 
@@ -414,7 +388,7 @@ public abstract class Character : MonoBehaviour
     {
         shieldObj = Instantiate(inventoryManager.ItemPrefabs[item.PrefabID], shieldHand);
 
-        shieldObj.transform.localPosition = new Vector3(-8.5f, -4f, 3f);
+        shieldObj.transform.localPosition = new Vector3(0f, 0f, 0f);
         shieldObj.transform.Rotate(-90f, 0f, 180f, Space.Self);
 
         defensePower += item.Power;
@@ -435,7 +409,7 @@ public abstract class Character : MonoBehaviour
     {
         weaponObj = Instantiate(inventoryManager.ItemPrefabs[item.PrefabID], weaponHand);
 
-        weaponObj.transform.localPosition = new Vector3(7.5f, 2f, 8f);
+        weaponObj.transform.localPosition = new Vector3(0f, 0f, 0f);
         weaponObj.transform.Rotate(90f, 0f, 180f, Space.Self);
 
         weaponPower += item.Power;

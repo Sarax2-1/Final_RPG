@@ -21,3 +21,4 @@ MonoBehaviour:
   shootTime: 1
   loadId: 0
   shootId: 1
+  sfxIndex: 2

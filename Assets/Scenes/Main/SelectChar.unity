@@ -245,9 +245,10 @@ MonoBehaviour:
   wisdomText: {fileID: 1154961362}
   charismaText: {fileID: 1176169894}
   heroPrefabs:
-  - {fileID: 4170236927608490626, guid: 262fac6577f25be419b032ee262de6be, type: 3}
-  - {fileID: 5438436895700522352, guid: 1d0c1dfbcb6f5a140858ccc642388726, type: 3}
+  - {fileID: 1753741187899190, guid: 27327eddfc574db4eae66efb4765e7a6, type: 3}
+  - {fileID: 1428387009061096, guid: 4e1a47ab366aac849b670bcd8c72f820, type: 3}
   - {fileID: 2125605731422057076, guid: 4606dcf42c6371f4ba2b427822b38aea, type: 3}
+  - {fileID: 6008615225553998891, guid: 5da981baa24d6144baa9c6dd396a63c1, type: 3}
   curId: 0
 --- !u!1 &139861426
 GameObject:

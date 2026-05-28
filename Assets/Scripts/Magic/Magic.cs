@@ -41,6 +41,10 @@ public class Magic
     private int shootId;
     public int ShootID { get { return shootId; } }
 
+    [SerializeField]
+    private int sfxIndex;
+    public int SfxIndex { get { return sfxIndex; } }
+
     public Magic(MagicData data)
     {
         id = data.id;
@@ -52,5 +56,6 @@ public class Magic
         shootTime = data.shootTime;
         loadId = data.loadId;
         shootId = data.shootId;
+        sfxIndex = data.sfxIndex;
     }
 }

@@ -1,4 +1,3 @@
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,9 +10,6 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Transform corner1;
     [SerializeField] private Transform corner2;
-
-    [SerializeField] private float xInput;
-    [SerializeField] private float zInput;
 
     public static CameraController instance;
     private InputAction moveAction;
@@ -41,16 +37,16 @@ public class CameraController : MonoBehaviour
         _camera = Camera.main;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveSpeed = 25f;
         zoomSpeed = 0.05f;
         moveAction = InputSystem.actions.FindAction("Move");
         zoomAction = InputSystem.actions.FindAction("Zoom");
+
+        currentXAngle = transform.eulerAngles.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveByKB();
@@ -62,8 +58,9 @@ public class CameraController : MonoBehaviour
     private void MoveByKB()
     {
         moveValue = moveAction.ReadValue<Vector2>();
-        xInput = moveValue.x;
-        zInput = moveValue.y;
+
+        float xInput = moveValue.x;
+        float zInput = moveValue.y;
 
         Vector3 dir = (transform.forward * zInput) + (transform.right * xInput);
 
@@ -74,7 +71,9 @@ public class CameraController : MonoBehaviour
     private void Zoom()
     {
         zoomValue = zoomAction.ReadValue<Vector2>();
-        zoomModifier = zoomValue.y * 5f;
+
+        float scrollDelta = Mathf.Clamp(zoomValue.y, -1f, 1f);
+        zoomModifier = scrollDelta * 5f;
 
         if (Keyboard.current.zKey.isPressed)
             zoomModifier = -1f;
@@ -87,11 +86,12 @@ public class CameraController : MonoBehaviour
 
     private Vector3 Clamp(Vector3 lowerLeft, Vector3 topRight)
     {
-        Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x, lowerLeft.x, topRight.x),
-            transform.position.y, Mathf.Clamp(transform.position.z, lowerLeft.z, topRight.z));
-
+        Vector3 pos = new Vector3(
+            Mathf.Clamp(transform.position.x, lowerLeft.x, topRight.x),
+            transform.position.y,
+            Mathf.Clamp(transform.position.z, lowerLeft.z, topRight.z)
+        );
         return pos;
-
     }
 
     private void MoveByMouse()
@@ -99,25 +99,25 @@ public class CameraController : MonoBehaviour
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
         if (mousePos.x >= Screen.width)
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
+            transform.position += transform.right * moveSpeed * Time.deltaTime;
         else if (mousePos.x <= 0)
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
+            transform.position -= transform.right * moveSpeed * Time.deltaTime;
 
         if (mousePos.y >= Screen.height)
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.World);
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         else if (mousePos.y <= 0)
-            transform.Translate(Vector3.back * moveSpeed * Time.deltaTime, Space.World);
+            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+
+        transform.position = Clamp(corner1.position, corner2.position);
     }
 
     private void RotateByMiddleMouse()
     {
-
         if (Mouse.current.middleButton.wasPressedThisFrame)
         {
             isRotating = true;
             lastMousePos = Mouse.current.position.ReadValue();
         }
-
 
         if (Mouse.current.middleButton.wasReleasedThisFrame)
             isRotating = false;
@@ -127,14 +127,11 @@ public class CameraController : MonoBehaviour
             Vector2 currentMousePos = Mouse.current.position.ReadValue();
             Vector2 delta = currentMousePos - lastMousePos;
 
-            // หมุนซ้าย-ขวา (ไม่มี limit)
             transform.Rotate(Vector3.up, delta.x * rotationSpeed * Time.deltaTime, Space.World);
 
-            // หมุนขึ้น-ลง (มี clamp)
             currentXAngle -= delta.y * rotationSpeed * Time.deltaTime;
             currentXAngle = Mathf.Clamp(currentXAngle, minXAngle, maxXAngle);
 
-            // เอา Y angle เดิมไว้ แล้วใส่ X angle ที่ clamp แล้ว
             Vector3 euler = transform.eulerAngles;
             transform.eulerAngles = new Vector3(currentXAngle, euler.y, 0f);
 

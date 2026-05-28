@@ -2433,7 +2433,7 @@ GameObject:
   - component: {fileID: -8107261882129519250}
   m_Layer: 6
   m_Name: Character_Hero_Knight_Male (1)
-  m_TagString: Player
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2540,6 +2540,7 @@ MonoBehaviour:
     shootTime: 0
     loadId: 0
     shootId: 0
+    sfxIndex: 0
   isMagicMode: 0
   inventoryItems: []
   mainWeapon:

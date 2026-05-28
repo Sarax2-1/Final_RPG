@@ -12,4 +12,5 @@ public class MagicData : ScriptableObject
     public float shootTime;
     public int loadId;
     public int shootId;
+    public int sfxIndex = -1;
 }

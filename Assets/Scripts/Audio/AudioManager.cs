@@ -4,50 +4,60 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource[] bgm;
-    public AudioSource[] BGM { get { return bgm; } }
+    private AudioSource[] bgmSources;
+    public AudioSource[] BGM { get { return bgmSources; } }
 
     [SerializeField]
-    private AudioSource[] sfx;
-    public AudioSource[] SFX { get { return sfx; } }
+    private AudioSource[] sfxSources;
+    public AudioSource[] SFX { get { return sfxSources; } }
 
     [SerializeField]
     private AudioMixer audioMixer;
 
+    private AudioSource currentBGM;
     public static AudioManager instance;
 
     void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
+        else { Destroy(gameObject); return; }
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
-        PlayBGM(0);
-        DontDestroyOnLoad(gameObject);
+        PlayRandomBGM();
     }
 
-    private void StopAllBGM()
+    public void PlayRandomBGM()
     {
-        for (int i = 0; i < bgm.Length; i++)
-            bgm[i].Stop();
+        StopAllBGM();
+        int idx = Random.Range(1, bgmSources.Length);
+        currentBGM = bgmSources[idx];
+        currentBGM.Play();
     }
 
-    public void PlayBGM(int i)
+    public void PlayBGM(int index)
     {
-        if (!BGM[i].isPlaying)
+        StopAllBGM();
+        if (index >= 0 && index < bgmSources.Length)
         {
-            StopAllBGM();
-
-            if (i < BGM.Length)
-                BGM[i].PlayDelayed(2f);
+            currentBGM = bgmSources[index];
+            currentBGM.Play();
         }
     }
 
-    public void PlaySFX(int i)
+    public void StopAllBGM()
     {
-        if (i < sfx.Length && !sfx[i].isPlaying)
-            sfx[i].Play();
+        foreach (var src in bgmSources)
+            src.Stop();
+    }
+
+    // SFX ตาม index
+    public void PlaySFX(int index)
+    {
+        if (index >= 0 && index < sfxSources.Length)
+            sfxSources[index].Play();
     }
 }
 
