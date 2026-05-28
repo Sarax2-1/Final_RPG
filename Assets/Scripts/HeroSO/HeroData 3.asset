@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56207e43b89e2546b142386bc8c224b, type: 3}
   m_Name: HeroData 3
   m_EditorClassIdentifier: Assembly-CSharp::HeroData
-  prefabId: 0
+  prefabId: 4
   curHp: 0
   magicIds: 
   inventoryItemIds: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -21,3 +21,5 @@ MonoBehaviour:
   exp: 0
   level: 0
   nextExp: 0
+  equippedWeaponId: -1
+  equippedArmorId: -1

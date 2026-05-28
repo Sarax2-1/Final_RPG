@@ -161,7 +161,6 @@ public abstract class Character : MonoBehaviour
     protected void WalkUpdate()
     {
         float distance = Vector3.Distance(transform.position, navAgent.destination);
-        Debug.Log(distance);
 
         if (distance <= navAgent.stoppingDistance)
             SetState(CharState.Idle);
@@ -382,7 +381,11 @@ public abstract class Character : MonoBehaviour
         partyManager = partyM;
 
         inventoryItems = new Item[InventoryManager.MAXSLOT];
+
+        OnAfterInit();
     }
+
+    protected virtual void OnAfterInit() { }
 
     public void EquipShield(Item item)
     {

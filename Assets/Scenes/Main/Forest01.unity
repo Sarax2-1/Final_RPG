@@ -1695,6 +1695,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a86dc0774d82a4cb98bce6665f24c8, type: 3}
+--- !u!224 &369095113 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4759807483859590344, guid: 15a86dc0774d82a4cb98bce6665f24c8, type: 3}
+  m_PrefabInstance: {fileID: 369095112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &406759332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409632, guid: f189ceaee61346344936eb8997a77b34, type: 3}
@@ -2942,8 +2947,6 @@ MonoBehaviour:
   moveSpeed: 10
   corner1: {fileID: 1290213971}
   corner2: {fileID: 2054240743}
-  xInput: 0
-  zInput: 0
   zoomModifier: 0
   zoomSpeed: 0
   rotationSpeed: 5
@@ -3977,7 +3980,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4744ff2d72ae98d4d88861dac12a1553, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 65ddb96a8834e57419008b941f725545, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1806383204
 GameObject:
@@ -4879,16 +4882,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4156319354806261796, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: enterPoints.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4156319354806261796, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: 'enterPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1355507380}
+    - target: {fileID: 4156319354806261796, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
+      propertyPath: 'enterPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2014070238}
     - target: {fileID: 6609629218454222256, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: boxSelection
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 369095113}
     - target: {fileID: 6996461072363458200, guid: cccb84094ab03854db8c94bb62530f6a, type: 3}
       propertyPath: m_Name
       value: GameManager

@@ -30,6 +30,9 @@ public class Enemy : Character
     protected override void Die()
     {
         base.Die();
-        partyManager.DistributeTotalExp(expDrop);
+        if (partyManager != null)
+            partyManager.DistributeTotalExp(expDrop);
+        else
+            Debug.LogError($"{gameObject.name} ไม่ได้รับการ CharInit!", gameObject);
     }
 }

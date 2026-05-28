@@ -136,19 +136,24 @@ public class InventoryManager : MonoBehaviour
         }
 
         GameObject itemObj = Instantiate(ItemPrefabs[id], pos, Quaternion.identity);
-        itemObj.AddComponent<ItemPick>();
 
+        // FIX: ไม่ AddComponent ใหม่ ดึงจาก prefab ที่มีอยู่แล้ว
+        // ถ้าไม่มีค่อย Add
+        ItemPick itemPick = itemObj.GetComponent<ItemPick>();
+        if (itemPick == null)
+            itemPick = itemObj.AddComponent<ItemPick>();
+
+        // adjust position
         MeshCollider meshCol = itemObj.GetComponent<MeshCollider>();
         if (meshCol != null)
         {
             Bounds bounds = meshCol.bounds;
             float bottomY = bounds.min.y;
-
             Vector3 adjust = new Vector3(0, pos.y - bottomY, 0);
             itemObj.transform.position += adjust;
         }
 
-        ItemPick itemPick = itemObj.GetComponent<ItemPick>();
+        // Init หลังจาก position ถูกต้องแล้ว
         itemPick.Init(item, instance, PartyManager.instance);
     }
 

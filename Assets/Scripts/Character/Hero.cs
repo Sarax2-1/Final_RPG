@@ -117,53 +117,62 @@ public class Hero : Character
     {
         nextExp = level * 30;
 
-        if (exp >= nextExp)
+        while (exp >= nextExp)
         {
             level++;
             nextExp = level * 30;
             UpdateStat();
-
-            Magic magic;
-
-            switch (level)
-            {
-                case 1:
-                    if (MyAction.onCreateMagic != null)
-                    {
-                        magic = MyAction.onCreateMagic(0);
-                        magicSkills.Add(magic);
-                        uiManager.ShowMagicToggles();
-                    }
-                    break;
-                case 5:
-                    if (MyAction.onCreateMagic != null)
-                    {
-                        magic = MyAction.onCreateMagic(1);
-                        magicSkills.Add(magic);
-                        uiManager.ShowMagicToggles();
-                    }
-                    break;
-                case 10:
-                    if (MyAction.onCreateMagic != null)
-                    {
-                        magic = MyAction.onCreateMagic(2);
-                        magic = MyAction.onCreateMagic(3);
-                        magicSkills.Add(magic);
-                        uiManager.ShowMagicToggles();
-                    }
-                    break;
-                case 15:
-                    if (MyAction.onCreateMagic != null)
-                    {
-                        magic = MyAction.onCreateMagic(4);
-                        magic = MyAction.onCreateMagic(5);
-                        magicSkills.Add(magic);
-                        uiManager.ShowMagicToggles();
-                    }
-                    break;
-
-            }
+            GiveMagicAtLevel(level);
         }
+    }
+
+    private void GiveMagicAtLevel(int lvl)
+    {
+        if (MyAction.onCreateMagic == null) return;
+
+        switch (lvl)
+        {
+            case 1:
+                magicSkills.Add(MyAction.onCreateMagic(0));
+                uiManager.ShowMagicToggles();
+                break;
+            case 5:
+                magicSkills.Add(MyAction.onCreateMagic(1));
+                uiManager.ShowMagicToggles();
+                break;
+            case 10:
+                magicSkills.Add(MyAction.onCreateMagic(2));
+                magicSkills.Add(MyAction.onCreateMagic(3));
+                uiManager.ShowMagicToggles();
+                break;
+            case 15:
+                // FIX: เดียวกัน
+                magicSkills.Add(MyAction.onCreateMagic(4));
+                magicSkills.Add(MyAction.onCreateMagic(5));
+                uiManager.ShowMagicToggles();
+                break;
+        }
+    }
+
+    private void InitStartingMagics()
+    {
+        if (MyAction.onCreateMagic == null) return;
+
+        if (level >= 1) magicSkills.Add(MyAction.onCreateMagic(0));
+        if (level >= 5) magicSkills.Add(MyAction.onCreateMagic(1));
+        if (level >= 10)
+        {
+            magicSkills.Add(MyAction.onCreateMagic(2));
+            magicSkills.Add(MyAction.onCreateMagic(3));
+        }
+        if (level >= 15)
+        {
+            magicSkills.Add(MyAction.onCreateMagic(4));
+            magicSkills.Add(MyAction.onCreateMagic(5));
+        }
+
+        if (magicSkills.Count > 0)
+            uiManager.ShowMagicToggles();
     }
 
     public void SaveItemInInventory(Item item)

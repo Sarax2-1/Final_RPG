@@ -51,18 +51,20 @@ public class CameraController : MonoBehaviour
     {
         MoveByKB();
         Zoom();
-        MoveByMouse();
+        //MoveByMouse();
         RotateByMiddleMouse();
     }
 
     private void MoveByKB()
     {
         moveValue = moveAction.ReadValue<Vector2>();
-
         float xInput = moveValue.x;
         float zInput = moveValue.y;
 
-        Vector3 dir = (transform.forward * zInput) + (transform.right * xInput);
+        Vector3 flatForward = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
+        Vector3 flatRight = new Vector3(transform.right.x, 0f, transform.right.z).normalized;
+
+        Vector3 dir = (flatForward * zInput) + (flatRight * xInput);
 
         transform.position += dir * moveSpeed * Time.deltaTime;
         transform.position = Clamp(corner1.position, corner2.position);
@@ -98,15 +100,18 @@ public class CameraController : MonoBehaviour
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
+        Vector3 flatForward = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
+        Vector3 flatRight = new Vector3(transform.right.x, 0f, transform.right.z).normalized;
+
         if (mousePos.x >= Screen.width)
-            transform.position += transform.right * moveSpeed * Time.deltaTime;
+            transform.position += flatRight * moveSpeed * Time.deltaTime;
         else if (mousePos.x <= 0)
-            transform.position -= transform.right * moveSpeed * Time.deltaTime;
+            transform.position -= flatRight * moveSpeed * Time.deltaTime;
 
         if (mousePos.y >= Screen.height)
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position += flatForward * moveSpeed * Time.deltaTime;
         else if (mousePos.y <= 0)
-            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+            transform.position -= flatForward * moveSpeed * Time.deltaTime;
 
         transform.position = Clamp(corner1.position, corner2.position);
     }

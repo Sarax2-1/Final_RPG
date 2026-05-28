@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1513284352239356013}
   - component: {fileID: 2499391744096683976}
   - component: {fileID: 381513790631293698}
+  - component: {fileID: 504680751518070207}
   m_Layer: 8
   m_Name: SM_Item_Bag_Large 1
   m_TagString: Item
@@ -90,3 +91,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &504680751518070207
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183001951008068311}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1775731935565371512, guid: f18ed0b3eceea0d4cbd303545a944848, type: 3}

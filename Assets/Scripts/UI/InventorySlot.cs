@@ -27,7 +27,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         ItemDrag itemDragA = objA.GetComponent<ItemDrag>();
         InventorySlot slotA = itemDragA.IconParent.GetComponent<InventorySlot>();
 
-        if (ItemType == ItemType.Shield)
+        if (itemType == ItemType.Shield)
         {
             if (itemDragA.Item.Type != itemType)
                 return;
