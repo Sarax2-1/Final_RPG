@@ -22,10 +22,10 @@ public class EnemyManager : MonoBehaviour
         }
         InventoryManager.instance.AddItem(monsters[0], 0);
         InventoryManager.instance.AddItem(monsters[1], 0);
-        InventoryManager.instance.AddItem(monsters[2], 0);
-        InventoryManager.instance.AddItem(monsters[3], 0);
-        InventoryManager.instance.AddItem(monsters[4], 0);
-        InventoryManager.instance.AddItem(monsters[5], 0);
+        InventoryManager.instance.AddItem(monsters[2], 4);
+        InventoryManager.instance.AddItem(monsters[3], 3);
+        InventoryManager.instance.AddItem(monsters[4], 6);
+        InventoryManager.instance.AddItem(monsters[5], 5);
 
 
 

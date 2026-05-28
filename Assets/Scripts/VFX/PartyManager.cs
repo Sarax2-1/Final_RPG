@@ -36,34 +36,12 @@ public class PartyManager : MonoBehaviour
     }
     private void Start()
     {
-        // foreach (Character c in members)
-        // {
-        //     c.CharInit(VFXManager.instance, UIManager.instance, InventoryManager.instance, this);
-        // }
-
-        SelectSingleHero(0);
-
-        // // Hero 1
-        // members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[0]));
-
-        // // Hero 2
-        // members[1].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[1]));
-
-        // InventoryManager.instance.AddItem(members[0], 0);
-        // InventoryManager.instance.AddItem(members[0], 1);
-        // InventoryManager.instance.AddItem(members[0], 2);
-        // InventoryManager.instance.AddItem(members[0], 10);
-        // InventoryManager.instance.AddItem(members[0], 3);
-        // InventoryManager.instance.AddItem(members[0], 4);
-
-        // InventoryManager.instance.AddItem(members[1], 2);
-        // InventoryManager.instance.AddItem(members[1], 5);
-        // InventoryManager.instance.AddItem(members[1], 8);
-        // // InventoryManager.instance.AddItem(members[1], 7);
-        // InventoryManager.instance.AddItem(members[1], 6);
-        // InventoryManager.instance.AddItem(members[1], 9);
-
-        UIManager.instance.ShowMagicToggles();
+        if (members.Count > 0)
+        {
+            SelectSingleHero(0);
+            UIManager.instance.MapToggleAvatar();
+            UIManager.instance.ShowMagicToggles();
+        }
     }
     private void Update()
     {
@@ -79,6 +57,8 @@ public class PartyManager : MonoBehaviour
 
     public void SelectSingleHero(int i)
     {
+        if (members.Count == 0 || i >= members.Count) return;
+
         foreach (Character c in selectChars)
             c.ToggleRingSelection(false);
 
@@ -177,8 +157,10 @@ public class PartyManager : MonoBehaviour
             heroData[i].prefabId = hero.PrefabID;
             heroData[i].curHp = hero.CurHP;
 
+            heroData[i].magicIds.Clear();
             for (int j = 0; j < hero.MagicSkills.Count; j++)
-                heroData[i].magicIds[j] = hero.MagicSkills[j].ID;
+                heroData[i].magicIds.Add(hero.MagicSkills[j].ID);
+
 
             for (int k = 0; k < hero.InventoryItems.Length; k++)
             {

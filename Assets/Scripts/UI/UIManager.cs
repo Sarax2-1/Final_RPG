@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         InitSlots();
-        MapToggleAvatar();
+        //MapToggleAvatar();
     }
     private void Update()
     {

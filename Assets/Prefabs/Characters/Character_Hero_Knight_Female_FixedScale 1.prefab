@@ -3973,7 +3973,7 @@ MonoBehaviour:
   weaponHand: {fileID: 4278834990416654}
   weaponObj: {fileID: 0}
   weaponPower: 0
-  prefabId: 1
+  prefabId: 0
   exp: 0
   level: 1
   nextExp: 30

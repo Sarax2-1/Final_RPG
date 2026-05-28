@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RightClick
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!114 &6609629218454222256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +90,10 @@ MonoBehaviour:
   magicData:
   - {fileID: 11400000, guid: 18b50afae70b8d741bd9bd5db2ef9d35, type: 2}
   - {fileID: 11400000, guid: 29dcc5d6cab085143b725a20b9fc5242, type: 2}
+  - {fileID: 11400000, guid: f7712a2f4252dc04bb03216b0a16841b, type: 2}
+  - {fileID: 11400000, guid: 2703da6faf25ea04db2ea3be412b3af7, type: 2}
+  - {fileID: 11400000, guid: e2f8e3e48c04a394ba16be9b463e9dd5, type: 2}
+  - {fileID: 11400000, guid: dbffbaa2bcca4d64388c3fb4eebc32d5, type: 2}
 --- !u!114 &5669006883163393001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,13 +131,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   itemPrefabs:
-  - {fileID: 6768986312423962569, guid: 72753ae36f6d0fc4ba4b40659d32464e, type: 3}
-  - {fileID: 157152, guid: ea86486534658254bbdc8b46a5b3fbdf, type: 3}
+  - {fileID: 2183001951008068311, guid: 355706291199c6742ac1b02fa5737ad3, type: 3}
+  - {fileID: 157152, guid: f7e0d864aae84bb44ad6076334a6749b, type: 3}
   - {fileID: 192082, guid: 4a7cd00659fd07c49a2eeaabe35200f1, type: 3}
   - {fileID: 190032, guid: 10a2dbbba72acd24e92bf329b5a7366f, type: 3}
   - {fileID: 119060, guid: b303ed5a6d2785b4dae0530c0bd4cd96, type: 3}
-  - {fileID: 148790, guid: 92cd70a481699ac4b93380dc1184f864, type: 3}
+  - {fileID: 110228, guid: f480ca55244c231408d5c6949f0c1538, type: 3}
   - {fileID: 138024, guid: 8d01c8f15ab35924db9cde0fe7f0fa9b, type: 3}
+  - {fileID: 174694, guid: 80a7d099f5a55eb41a3bad9fe7566c83, type: 3}
+  - {fileID: 134092, guid: ae3fb773140c08e4e8f96c87faf837dd, type: 3}
   itemData:
   - {fileID: 11400000, guid: a35302f952360fa4b892df38a9349308, type: 2}
   - {fileID: 11400000, guid: f621f18ed8971be49b8db37533c62a15, type: 2}
@@ -147,6 +153,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 472443f7d212f6249b42d13976840329, type: 2}
   - {fileID: 11400000, guid: 1eb72f19e421b8b4fad26ad8cb38ed52, type: 2}
   - {fileID: 11400000, guid: c7d535d832d2331488f92c1e33fe8d8e, type: 2}
+  - {fileID: 11400000, guid: cdb8a1da3eed1d044b2fab8c3524f096, type: 2}
+  - {fileID: 11400000, guid: 5b67475da70b8bf4f979f3edf23f3d0a, type: 2}
+  - {fileID: 11400000, guid: 596fe3f40cb3efc44b92a0dca7502eff, type: 2}
+  - {fileID: 11400000, guid: 46da71929ac895d4cacb3aa5a71e59d2, type: 2}
 --- !u!114 &8408531715990420471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   monsters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -214,8 +228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   heroPrefabs:
-  - {fileID: 4170236927608490626, guid: 262fac6577f25be419b032ee262de6be, type: 3}
-  - {fileID: 5438436895700522352, guid: 1d0c1dfbcb6f5a140858ccc642388726, type: 3}
+  - {fileID: 1753741187899190, guid: 27327eddfc574db4eae66efb4765e7a6, type: 3}
+  - {fileID: 1428387009061096, guid: 4e1a47ab366aac849b670bcd8c72f820, type: 3}
+  - {fileID: 2125605731422057076, guid: 4606dcf42c6371f4ba2b427822b38aea, type: 3}
+  - {fileID: 6008615225553998891, guid: 5da981baa24d6144baa9c6dd396a63c1, type: 3}
 --- !u!114 &4156319354806261796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,4 +244,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ee3ee3de40e0245940038fba2c8a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  enterPoints: []
+  enterPoints:
+  - {fileID: 0}

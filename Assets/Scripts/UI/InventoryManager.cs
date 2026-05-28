@@ -130,20 +130,21 @@ public class InventoryManager : MonoBehaviour
             case ItemType.Consumable:
                 id = 1;
                 break;
+            case ItemType.Weapon:
+                id = 9;
+                break;
             default:
                 id = 0;
                 break;
+
         }
 
         GameObject itemObj = Instantiate(ItemPrefabs[id], pos, Quaternion.identity);
 
-        // FIX: ไม่ AddComponent ใหม่ ดึงจาก prefab ที่มีอยู่แล้ว
-        // ถ้าไม่มีค่อย Add
         ItemPick itemPick = itemObj.GetComponent<ItemPick>();
         if (itemPick == null)
             itemPick = itemObj.AddComponent<ItemPick>();
 
-        // adjust position
         MeshCollider meshCol = itemObj.GetComponent<MeshCollider>();
         if (meshCol != null)
         {
@@ -153,7 +154,6 @@ public class InventoryManager : MonoBehaviour
             itemObj.transform.position += adjust;
         }
 
-        // Init หลังจาก position ถูกต้องแล้ว
         itemPick.Init(item, instance, PartyManager.instance);
     }
 
