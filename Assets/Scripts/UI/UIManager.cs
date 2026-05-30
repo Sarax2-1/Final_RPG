@@ -292,10 +292,12 @@ public class UIManager : MonoBehaviour
         curToggleMagicTD = i;
         PartyManager.instance.HeroSelectMagicSkill(i);
     }
+
     public void IsOnCurToggleMagic(bool flag)
     {
         toggleMagic[curToggleMagicTD].isOn = flag;
     }
+
     public void ToggleInventoryPanel()
     {
         if (!inventoryPanel.activeInHierarchy)
@@ -311,6 +313,7 @@ public class UIManager : MonoBehaviour
             ClearInventory();
         }
     }
+
     public void ClearInventory()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -322,6 +325,7 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
     public void ShowInventory()
     {
         if (PartyManager.instance.SelectChars.Count <= 0)
@@ -348,6 +352,7 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
     private void InitSlots()
     {
         for (int i = 0; i < InventoryManager.MAXSLOT; i++)

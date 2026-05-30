@@ -24,6 +24,9 @@ public class Enemy : Character
             case CharState.WalkToEnemy:
                 WalkToEnemyUpdate();
                 break;
+            case CharState.Attack:
+                AttackUpdate();
+                break;
         }
     }
 

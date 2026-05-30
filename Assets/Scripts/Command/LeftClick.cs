@@ -170,6 +170,6 @@ public class LeftClick : MonoBehaviour
             UIManager.instance.ToggleAvatar[0].isOn = true;
 
         if (itemPick != null)
-            itemPick.PickUpItem(PartyManager.instance.SelectChars[0]);
+            itemPick.PickUpItem();
     }
 }

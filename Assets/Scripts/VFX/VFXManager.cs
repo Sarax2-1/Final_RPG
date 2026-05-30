@@ -43,14 +43,14 @@ public class VFXManager : MonoBehaviour
     {
         MyAction.onLoadMagic += LoadMagic;
         MyAction.onShootMagic += ShootMagic;
-        MyAction.onCreateMagic += CreateMagic;  // === 47.14 เพิ่ม ===
+        MyAction.onCreateMagic += CreateMagic;
     }
 
     private void OnDisable()
     {
         MyAction.onLoadMagic -= LoadMagic;
         MyAction.onShootMagic -= ShootMagic;
-        MyAction.onCreateMagic -= CreateMagic;  // === 47.14 เพิ่ม ===
+        MyAction.onCreateMagic -= CreateMagic;
     }
 
     public Magic CreateMagic(int id)

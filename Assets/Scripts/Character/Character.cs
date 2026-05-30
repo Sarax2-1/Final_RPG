@@ -249,6 +249,7 @@ public abstract class Character : MonoBehaviour
         if (curCharTarget.CurHP <= 0)
         {
             SetState(CharState.Idle);
+            curCharTarget = null;
             return;
         }
 

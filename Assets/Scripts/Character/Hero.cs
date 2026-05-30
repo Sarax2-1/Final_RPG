@@ -154,26 +154,26 @@ public class Hero : Character
         }
     }
 
-    private void InitStartingMagics()
-    {
-        if (MyAction.onCreateMagic == null) return;
+    // private void InitStartingMagics()
+    // {
+    //     if (MyAction.onCreateMagic == null) return;
 
-        if (level >= 1) magicSkills.Add(MyAction.onCreateMagic(0));
-        if (level >= 5) magicSkills.Add(MyAction.onCreateMagic(1));
-        if (level >= 10)
-        {
-            magicSkills.Add(MyAction.onCreateMagic(2));
-            magicSkills.Add(MyAction.onCreateMagic(3));
-        }
-        if (level >= 15)
-        {
-            magicSkills.Add(MyAction.onCreateMagic(4));
-            magicSkills.Add(MyAction.onCreateMagic(5));
-        }
+    //     if (level >= 1) magicSkills.Add(MyAction.onCreateMagic(0));
+    //     if (level >= 5) magicSkills.Add(MyAction.onCreateMagic(1));
+    //     if (level >= 10)
+    //     {
+    //         magicSkills.Add(MyAction.onCreateMagic(2));
+    //         magicSkills.Add(MyAction.onCreateMagic(3));
+    //     }
+    //     if (level >= 15)
+    //     {
+    //         magicSkills.Add(MyAction.onCreateMagic(4));
+    //         magicSkills.Add(MyAction.onCreateMagic(5));
+    //     }
 
-        if (magicSkills.Count > 0)
-            uiManager.ShowMagicToggles();
-    }
+    //     if (magicSkills.Count > 0)
+    //         uiManager.ShowMagicToggles();
+    // }
 
     public void SaveItemInInventory(Item item)
     {
